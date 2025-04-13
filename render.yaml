@@ -2,7 +2,7 @@ services:
   - type: web
     name: adeluxe-backend
     env: node
-    buildCommand: "npm install"
+    buildCommand: "nvm install 20 && npm install && npm run build"
     startCommand: "npm run start:prod"
     branch: master
     autoDeploy: true
