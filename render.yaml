@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: adeluxe-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm run start:prod"
+    branch: master
+    autoDeploy: true
+    healthCheckPath: "/"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: postgresql://postgres.rfdlvjedyoywezbyrwwn:WkoaYNFf92CAWqQH@aws-0-ca-central-1.pooler.supabase.com:5432/postgres?sslmode=require # If you're using a database
+    plan: free  # You can adjust the plan (e.g., free, standard) depending on your needs
