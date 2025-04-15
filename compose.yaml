@@ -1,0 +1,14 @@
+services:
+  api:
+    container_name: Adeluxe-backend
+    build:
+      context: .
+    ports:
+      - '${PORT}'
+    env_file:
+      - .env
+    networks:
+      - main_network
+
+networks:
+  main_network:
